@@ -25,3 +25,4 @@ htmlcov/
 *,cover
 venv
 *_cache.json
+flask_session/

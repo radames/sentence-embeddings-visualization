@@ -11,16 +11,117 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@3/dist/inspector.css"
     />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Source+Serif+4:wght@700&display=swap");
+    </style>
+    <style>
+      .mw8 {
+        max-width: 64rem;
+      }
+      .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .ph3 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .measure-wide {
+        max-width: 34em;
+      }
+      * {
+        font-family: "Roboto", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Source Serif 4", serif;
+      }
+    </style>
   </head>
   <body>
-    <div id="observablehq-3f13b363"></div>
+    <article class="mw8 mx-auto ph3 sans-serif">
+      <div class="measure-wide" id="observablehq-intro-7dbb745c"></div>
+      <div id="observablehq-viewof-sentences-7dbb745c"></div>
+      <div id="observablehq-viewof-params-7dbb745c"></div>
+      <div id="observablehq-viewof-tryme-7dbb745c"></div>
+      <div id="observablehq-viewof-clear-7dbb745c"></div>
+      <div id="observablehq-dialog-7dbb745c"></div>
+      <div id="observablehq-viewof-scatter-7dbb745c"></div>
+      <div id="observablehq-umapoptions-7dbb745c"></div>
+      <div id="observablehq-viewof-umapOptions-7dbb745c"></div>
+      <div id="observablehq-umapbutton-7dbb745c"></div>
+      <div id="observablehq-hdbscanoptions-7dbb745c"></div>
+      <div id="observablehq-viewof-clusterOptions-7dbb745c"></div>
+      <div id="observablehq-hdbcscanbutton-7dbb745c"></div>
+    </article>
+
     <script type="module">
       import {
         Runtime,
         Inspector,
       } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
       import define from "https://api.observablehq.com/d/843a8bdf01fc2c8f.js?v=3";
-      new Runtime().module(define, Inspector.into("#observablehq-3f13b363"));
+      new Runtime().module(define, (name) => {
+        if (name === "intro")
+          return new Inspector(
+            document.querySelector("#observablehq-intro-7dbb745c")
+          );
+        if (name === "viewof sentences")
+          return new Inspector(
+            document.querySelector("#observablehq-viewof-sentences-7dbb745c")
+          );
+        if (name === "viewof params")
+          return new Inspector(
+            document.querySelector("#observablehq-viewof-params-7dbb745c")
+          );
+        if (name === "viewof tryme")
+          return new Inspector(
+            document.querySelector("#observablehq-viewof-tryme-7dbb745c")
+          );
+        if (name === "viewof clear")
+          return new Inspector(
+            document.querySelector("#observablehq-viewof-clear-7dbb745c")
+          );
+        if (name === "dialog")
+          return new Inspector(
+            document.querySelector("#observablehq-dialog-7dbb745c")
+          );
+        if (name === "viewof scatter")
+          return new Inspector(
+            document.querySelector("#observablehq-viewof-scatter-7dbb745c")
+          );
+        if (name === "umapoptions")
+          return new Inspector(
+            document.querySelector("#observablehq-umapoptions-7dbb745c")
+          );
+        if (name === "viewof umapOptions")
+          return new Inspector(
+            document.querySelector("#observablehq-viewof-umapOptions-7dbb745c")
+          );
+        if (name === "umapbutton")
+          return new Inspector(
+            document.querySelector("#observablehq-umapbutton-7dbb745c")
+          );
+        if (name === "hdbscanoptions")
+          return new Inspector(
+            document.querySelector("#observablehq-hdbscanoptions-7dbb745c")
+          );
+        if (name === "viewof clusterOptions")
+          return new Inspector(
+            document.querySelector(
+              "#observablehq-viewof-clusterOptions-7dbb745c"
+            )
+          );
+        if (name === "hdbcscanbutton")
+          return new Inspector(
+            document.querySelector("#observablehq-hdbcscanbutton-7dbb745c")
+          );
+        return ["update", "data", "colorScale"].includes(name);
+      });
     </script>
   </body>
 </html>
