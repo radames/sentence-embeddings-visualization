@@ -49,6 +49,7 @@
       <div id="observablehq-viewof-params-7dbb745c"></div>
       <div id="observablehq-viewof-tryme-7dbb745c"></div>
       <div id="observablehq-viewof-clear-7dbb745c"></div>
+      <div id="observablehq-datasets-7dbb745c"></div>
       <div id="observablehq-dialog-7dbb745c"></div>
       <div id="observablehq-viewof-scatter-7dbb745c"></div>
       <div id="observablehq-umapoptions-7dbb745c"></div>
@@ -85,6 +86,10 @@
         if (name === "viewof clear")
           return new Inspector(
             document.querySelector("#observablehq-viewof-clear-7dbb745c")
+          );
+        if (name === "datasets")
+          return new Inspector(
+            document.querySelector("#observablehq-datasets-7dbb745c")
           );
         if (name === "dialog")
           return new Inspector(
